@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+files=$(shopt -s nullglob dotglob; echo /etc/opt/jfrog/artifactory/*)
+if (( !${#files} ))
+then
+  cp /artifactory/default /etc/opt/jfrog/artifactory/
+  /artifactory/bin/installService.sh
+fi
+/artifactory/bin/artifactory.sh
