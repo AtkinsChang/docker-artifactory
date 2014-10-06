@@ -1,5 +1,5 @@
 # DOCKER-VERSION 1.0.1
-FROM atkinschang/docker-base:ubuntu12-java8
+FROM atkinschang/docker-base:ubuntu14-java8
 MAINTAINER Atkins CHang "atkinschang@icloud.com"
 
 RUN apt-get update && apt-get dist-upgrade -y && \
